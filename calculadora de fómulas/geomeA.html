@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Fórmulas</title>
+    <link href="css/GeometriaA.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <script src="js/calculosG.js"></script>
+    <div class="header">
+        <h1><em>Calculadora de fórmulas</em></h1>
+        <div class="flex-container">
+            <div><a href="fisica.html">Física</a></div>
+            <div><a href="alge.html">Álgebra</a></div>
+            <div><a href="geomeA.html">Geometría Analítica</a></div>
+            <div><a href="index.html">Regresar a menú</a></div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-s-12">
+            <h1>La recta</h1>
+            <p class="texto">Llena los datos y calcula!</p>
+            <div class="gallery">
+                <div class="desc">
+                    <p class="texto">Pendiente dados dos puntos</p>
+                    <form id="pendiente">
+                        <label>x1:</label>
+                        <input type="text" id="x1_1" name="x1" placeholder="coordenada x1" required>
+                        <p class="textoAlert"><span id="incorr1_1G"></span></p>
+                        <p class="textoAlert"><span id="incorr11_1G"></span></p>
+                        <label>y1:</label>
+                        <input type="text" id="y1_1" name="y1" placeholder="coordenada y1"  required>
+                        <p class="textoAlert"><span id="incorr2_1G"></span></p>
+                        <p class="textoAlert"><span id="incorr21_1G"></span></p>
+                        <label>x2:</label>
+                        <input type="text" id="x2_1" name="x2" placeholder="coordenada x2"  required>
+                        <p class="textoAlert"><span id="incorr3_1G"></span></p>
+                        <p class="textoAlert"><span id="incorr31_1G"></span></p>                        
+                        <label>y2:</label>
+                        <input type="text" id="y2_1" name="y2" placeholder="coordenada y2" required>
+                        <p class="textoAlert"><span id="incorr4_1G"></span></p>
+                        <p class="textoAlert"><span id="incorr41_1G"></span></p>
+                        <button type="button" onclick="calcula1G();">Calcular</button>
+                        <button type="button" onclick="limpiar1G();">Limpiar campos</button>
+                        <br><br><br><br><br><br><br><br>
+                        <p class="texto">La pendiente es: <span id="rPendiente"></span></p>
+                        <p class="texto3"><span id="incorr1G"></span></p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="gallery">
+                <div class="desc">
+                    <p class="texto">Distancia entre dos puntos</p>
+                    <form id="disDos">
+                        <label>x1:</label>
+                        <input type="text" id="x1_2" name="x1" placeholder="coordenada x1" required>
+                        <p class="textoAlert"><span id="incorr1_2G"></span></p>
+                        <p class="textoAlert"><span id="incorr11_2G"></span></p>
+                        <label>y1:</label>
+                        <input type="text" id="y1_2" name="y1" placeholder="coordenada y1" required>
+                        <p class="textoAlert"><span id="incorr2_2G"></span></p>
+                        <p class="textoAlert"><span id="incorr21_2G"></span></p>
+                        <label>x2:</label>
+                        <input type="text" id="x2_2" name="x2" placeholder="coordenada x2" required>
+                        <p class="textoAlert"><span id="incorr3_2G"></span></p>
+                        <p class="textoAlert"><span id="incorr31_2G"></span></p>
+                        <label>y2:</label>
+                        <input type="text" id="y2_2" name="y2" placeholder="coordenada y2" required>
+                        <p class="textoAlert"><span id="incorr4_2G"></span></p>
+                        <p class="textoAlert"><span id="incorr41_2G"></span></p>
+                        <button type="button" onclick="calcula2G();">Calcular</button>
+                        <button type="button" onclick="limpiar2G();">Limpiar campos</button>
+                        <br><br><br><br><br><br><br><br>
+                        <p class="texto">La distacia entre las coordenadas dadas es: <span id="distancia"></span></p>
+                        
+                    </form>
+                </div>
+            </div>
+
+            <div class="gallery">
+                <div class="desc">
+                    <p class="texto">Punto medio de un segmento de recta</p>
+                    <form id="pMedio">
+                        <label>x1:</label>
+                        <input type="text" id="x1_3" name="x1" placeholder="coordenada x1" required>
+                        <p class="textoAlert"><span id="incorr1_3G"></span></p>
+                        <p class="textoAlert"><span id="incorr11_3G"></span></p>
+                        <label>y1:</label>
+                        <input type="text" id="y1_3" name="y1" placeholder="coordenada y1" required>
+                        <p class="textoAlert"><span id="incorr2_3G"></span></p>
+                        <p class="textoAlert"><span id="incorr21_3G"></span></p>
+                        <label>x2:</label>
+                        <input type="text" id="x2_3" name="x2" placeholder="coordenada x2" required>
+                        <p class="textoAlert"><span id="incorr3_3G"></span></p>
+                        <p class="textoAlert"><span id="incorr31_3G"></span></p>
+                        <label>y2:</label>
+                        <input type="text" id="y2_3" name="y2" placeholder="coordenada y2" required>
+                        <p class="textoAlert"><span id="incorr4_3G"></span></p>
+                        <p class="textoAlert"><span id="incorr41_3G"></span></p>
+                        <button type="button" onclick="calcula3G();">Calcular</button>
+                        <button type="button" onclick="limpiar3G();">Limpiar campos</button> <br><br><br><br><br><br><br><br>
+                        <p class="texto">El punto medio se encuentra en: <br> "x": <span id="xmedio"></span> <br>"y": <span id="ymedio"></span></p>
+                    </form>
+                </div>
+            </div>
+
+            <div class="gallery">
+                <div class="desc">
+                    <p class="texto">Ec. de la forma general de la recta</p>
+                    <form id="ecRecta">
+                        <label>A:</label>
+                        <input type="text" id="a4" name="A" placeholder="ingresa A" required>
+                        <p class="textoAlert"><span id="incorr1_4G"></span></p>
+                        <p class="textoAlert"><span id="incorr11_4G"></span></p>
+                        <label>B:</label>
+                        <input type="text" id="b4" name="B" placeholder="]ingresa B" required>
+                        <p class="textoAlert"><span id="incorr2_4G"></span></p>
+                        <p class="textoAlert"><span id="incorr21_4G"></span></p>
+                        <label>C:</label>
+                        <input type="text" id="c4" name="C" placeholder="ingresa C" required>
+                        <p class="textoAlert"><span id="incorr3_4G"></span></p>
+                        <p class="textoAlert"><span id="incorr31_4G"></span></p>
+                        <button type="button" onclick="calcula4G();">Calcular</button>
+                        <button type="button" onclick="limpiar4G();">Limpiar campos</button> <br><br><br><br><br><br><br>
+                        <p class="texto">La pendiente es: <span id="pendiente4"></span> </p>
+                        <p class="texto">La ordenada al origen es: <span id="ordOrig"></span> </p>
+                        <p class="texto">La abscisa al origen es: <span id="abscOrig"></span> </p>
+                        <p class="texto3"><span id="incorr4G"></span></p>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p> PROGRAMACIÓN WEB </p>
+    </div>
+
+</body>
+
+</html>

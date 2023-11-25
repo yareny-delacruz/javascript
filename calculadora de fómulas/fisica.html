@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Fórmulas</title>
+    <link href="css/fisica.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<script src="js/calculosF.js"></script>
+<div class="header">
+  <h1><em>Calculadora de fórmulas</em></h1>
+  <div class="flex-container">
+    <div><a href="fisica.html">Física</a></div>
+    <div><a href="alge.html">Álgebra</a></div>
+    <div><a href="geomeA.html">Geometría Analítica</a></div>
+    <div><a href="index.html">Regresar a menú</a></div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 col-s-12">
+    <h1>Fórmulas de MRU</h1>
+    <p class="texto">Llena los datos y calcula!</p>
+    <div class="gallery">
+      <div class="desc">
+        <p class="texto">Posición final</p>
+        <form id="posicionFinal">
+        <label>Xo (m):</label>
+        <input type="text" id="posIni1" name="posIni" placeholder="Pos. inicial" required>
+        <p class="textoAlert"><span id="incorr1_1F"></span></p>
+        <p class="textoAlert"><span id="incorr11_1F"></span></p>
+        <label>Vo (m/s):</label>
+        <input type="text" id="veloIni1" name="veloIni" placeholder="Velo. inicial" required>
+        <p class="textoAlert"><span id="incorr2_1F"></span></p>
+        <p class="textoAlert"><span id="incorr21_1F"></span></p>
+        <label>tf (s):</label>
+        <input type="text" id="tiempoF1" name="tiempoF" placeholder="Tiempo final" required>
+        <p class="textoAlert"><span id="incorr3_1F"></span></p>
+        <p class="textoAlert"><span id="incorr31_1F"></span></p>
+        <label>to (s):</label>
+        <input type="text" id="tiempoI1" name="tiempoI" placeholder="Tiempo inicial" required>
+        <p class="textoAlert"><span id="incorr4_1F"></span></p>
+        <p class="textoAlert"><span id="incorr41_1F"></span></p>
+        <button type="button" onclick="calcula1F();">Calcular</button>
+        <button type="button" onclick="limpiar1F();">Limpiar campos</button> <br><br><br><br><br><br><br><br>
+        <p class="texto">La posicion final es: <span id="resultado1"></span> metros</p>
+        </form>        
+      </div>
+    </div>
+    
+    <div class="gallery">
+      <div class="desc">
+        <p class="texto">Velocidad</p>
+        <form id="velocidad">
+          <label>Xo (m):</label>
+          <input type="text" id="posIni2" name="posIni" placeholder="Pos. inicial" required>
+          <p class="textoAlert"><span id="incorr1_2F"></span></p>
+          <p class="textoAlert"><span id="incorr11_2F"></span></p>
+          <label>Xf (m):</label>
+          <input type="text" id="posFin2" name="posFin" placeholder="Pos. final"  required>
+          <p class="textoAlert"><span id="incorr2_2F"></span></p>
+          <p class="textoAlert"><span id="incorr21_2F"></span></p>
+          <label>to (s):</label>
+          <input type="text" id="tiempoI2" name="tiempoI" placeholder="Tiempo inicial"  required>
+          <p class="textoAlert"><span id="incorr3_2F"></span></p>
+          <p class="textoAlert"><span id="incorr31_2F"></span></p>
+          <label>tf (s):</label>
+          <input type="text" id="tiempoF2" name="tiempoF" placeholder="Tiempo final" required>
+          <p class="textoAlert"><span id="incorr4_2F"></span></p>
+          <p class="textoAlert"><span id="incorr41_2F"></span></p>
+          <button type="button" onclick="calcula2F();">Calcular</button>
+          <button type="button" onclick="limpiar2F();">Limpiar campos</button> <br><br><br><br><br><br><br><br>
+          <p class="texto">La velocidad es: <span id="resultado2"></span> m/s</p>
+        </form> 
+      </div>
+    </div>
+    
+    <div class="gallery">
+      <div class="desc">
+        <p class="texto">Tiempo</p>
+        <form id="tiempo">
+          <label>Xo (m):</label>
+          <input type="text" id="posIni3" name="posIni" placeholder="Pos. inicial" required>
+          <p class="textoAlert"><span id="incorr1_3F"></span></p>
+          <p class="textoAlert"><span id="incorr11_3F"></span></p>
+          <label>Xf (m):</label>
+          <input type="text" id="posFin3" name="posFin" placeholder="Pos. final"  required>
+          <p class="textoAlert"><span id="incorr2_3F"></span></p>
+          <p class="textoAlert"><span id="incorr21_3F"></span></p>
+          <label>V (m/s):</label>
+          <input type="text" id="velo3" name="velo" placeholder="velocidad" required>
+          <p class="textoAlert"><span id="incorr3_3F"></span></p>
+          <p class="textoAlert"><span id="incorr31_3F"></span></p>
+          <br><br><br><br>
+          <button type="button" onclick="calcula3F();">Calcular</button>
+          <button type="button" onclick="limpiar3F();">Limpiar campos</button> <br><br><br><br><br><br><br>
+          <p class="texto">El tiempo es: <span id="resultado3"></span> segundos</p>
+        </form>  
+      </div>
+    </div>
+    
+    <div class="gallery">
+      <div class="desc">
+        <p class="texto">Distancia</p>
+        <form id="posicionInicial">
+          <label>Vo (m/s):</label>
+          <input type="text" id="veloIni4" name="veloIni" placeholder="Velo. inicial" required>
+          <p class="textoAlert"><span id="incorr1_4F"></span></p>
+          <p class="textoAlert"><span id="incorr11_4F"></span></p>
+          <label>tf (d):</label>
+          <input type="text" id="tiempoF4" name="tiempoF" placeholder="Tiempo final" required>
+          <p class="textoAlert"><span id="incorr2_4F"></span></p>
+          <p class="textoAlert"><span id="incorr21_4F"></span></p>
+          <label>to (s):</label>
+          <input type="text" id="tiempoI4" name="tiempoI" placeholder="Tiempo inicial" required>
+          <p class="textoAlert"><span id="incorr3_4F"></span></p>
+          <p class="textoAlert"><span id="incorr31_4F"></span></p>
+          <br><br><br><br>
+          <button type="button" onclick="calcula4F();">Calcular</button>
+          <button type="button" onclick="limpiar4F();">Limpiar campos</button> <br><br><br><br><br><br><br>
+          <p class="texto">La distancia es: <span id="resultado4"></span> metros</p>
+        </form> 
+      </div>
+    </div>
+   
+  </div>
+</div>
+
+<div class="footer">
+  <p> PROGRAMACIÓN WEB </p>
+</div>
+
+</body>
+</html>

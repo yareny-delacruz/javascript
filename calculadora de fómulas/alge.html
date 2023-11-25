@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Fórmulas</title>
+  <link href="css/algebra.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <script src="js/calculosA.js"></script>
+  <div class="header">
+    <h1><em>Calculadora de fórmulas</em></h1>
+    <div class="flex-container">
+      <div><a href="fisica.html">Física</a></div>
+      <div><a href="alge.html">Álgebra</a></div>
+      <div><a href="geomeA.html">Geometría Analítica</a></div>
+      <div><a href="index.html">Regresar a menú</a></div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-s-12">
+      <h1>Ecuaciones algebráicas, factorial y productos notables</h1>
+      <p class="texto">Llena los datos y calcula!</p>
+      <div class="gallery">
+        <div class="desc">
+          <p class="texto">Ecuación cuadrática</p>
+          <form id="ecuCuadraticas">
+            <p class="texto2">0 = <em>ax</em><sup>2</sup>+<em>bx</em>+<em>c</em></p>
+            <label>a:</label>
+            <input type="text" id="a1" name="a" placeholder="valor de a"  required>
+            <p class="textoAlert"><span id="incorr1_1A"></span></p>
+            <p class="textoAlert"><span id="incorr11_1A"></span></p>
+            <label>b:</label>
+            <input type="text" id="b1" name="b" placeholder="valor de b"  required>
+            <p class="textoAlert"><span id="incorr2_1A"></span></p>
+            <p class="textoAlert"><span id="incorr21_1A"></span></p>
+            <label>c:</label>
+            <input type="text" id="c1" name="c" placeholder="valor de c"  required>
+            <p class="textoAlert"><span id="incorr3_1A"></span></p>
+            <p class="textoAlert"><span id="incorr31_1A"></span></p>
+            <button type="button" onclick="calcula1A();">Calcular</button>
+            <button type="button" onclick="limpiar1A();">Limpiar campos</button> <br><br><br><br><br><br><br>
+            <p class="texto">x1= <span id="x1"></span>; x2= <span id="x2"></span> </p>
+            <p class="texto3"><span id="incorr1"></span></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <div class="desc">
+          <p class="texto">Factorial <br><br></p>
+          <p class="texto2"><em>n!=(n)(n-1)</em><br><em>(n-2)...(3)(2)(1)</em><br><br></p>
+          <form id="factorial">
+            <label>n:</label>
+            <input type="text" id="fact2" name="fact" placeholder="Número" required>
+            <p class="textoAlert"><span id="incorr1_2A"></span></p>
+            <p class="textoAlert"><span id="incorr11_2A"></span></p>
+            <br><br>
+            <button type="button" onclick="calcula2A();">Calcular</button>
+            <button type="button" onclick="limpiar2A();">Limpiar campos</button> <br><br><br><br><br><br><br>
+            <p class="texto">El factorial de <span id=nfact></span> es: <span id="factn"></span></p>
+          </form>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <div class="desc">
+          <p class="texto">Suma y diferencia de cubos </p>
+          <p class="texto2"><span id="formula3">(<em>a</em><sup>3</sup>+/-<em>b</em><sup>3</sup>)</span></p>
+          <form id="cubos">
+            <label>a: </label>
+            <input type="text" id="a3" name="a" placeholder="Valor de a"  required>
+            <p class="textoAlert"><span id="incorr1_3A"></span></p>
+            <p class="textoAlert"><span id="incorr11_3A"></span></p>
+            <label>b: </label>
+            <input type="text" id="b3" name="b" placeholder="Valor de b" required>
+            <p class="textoAlert"><span id="incorr2_3A"></span></p>
+            <p class="textoAlert"><span id="incorr21_3A"></span></p>
+            <br><br><br><br>
+            <button type="button" onclick="calcula3A();">Calcular</button>
+            <button type="button" onclick="limpiar3A();">Limpiar campos</button> <br><br><br><br><br><br><br>
+            <p class="texto">El resultado es: <span id="rCubos"></span> </p>
+          </form>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <div class="desc">
+          <p class="texto">Suma y diferencia de cuadrados</p>
+          <p class="texto2"><span id=formula4>(<em>a</em><sup>2</sup>+/-<em>b</em><sup>2</sup>)</span></p>
+          <form id="cuadrados">
+            <label>a: </label>
+            <input type="text" id="a4" name="a" placeholder="Valor de a"  required>
+            <p class="textoAlert"><span id="incorr1_4A"></span></p>
+            <p class="textoAlert"><span id="incorr11_4A"></span></p>
+            <label>b: </label>
+            <input type="text" id="b4" name="a" placeholder="Valor de b"  required>
+            <p class="textoAlert"><span id="incorr2_4A"></span></p>
+            <p class="textoAlert"><span id="incorr21_4A"></span></p>
+            <br><br><br><br>
+            <button type="button" onclick="calcula4A();">Calcular</button>
+            <button type="button" onclick="limpiar4A();">Limpiar campos</button> <br><br><br><br><br><br><br>
+            <p class="texto">Elresultado es: <span id="rCuadrados"></span> </p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <p> PROGRAMACIÓN WEB </p>
+  </div>
+
+</body>
+
+</html>
